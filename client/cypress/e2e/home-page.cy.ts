@@ -8,6 +8,7 @@ describe('home page', () => {
 
   afterEach(() => {
     cy.get<Prisma.Hero>('@newHero').then((newHero) => {
+      console.log(newHero)
       cy.deleteHero(newHero.id);
     });
   });
